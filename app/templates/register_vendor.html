@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Register{% endblock %}
+{% block content %}
+		<div class="register">
+			<h1>Register</h1>
+			<div class="links">
+				<a href="{{ url_for('auth.login') }}" >Login</a>
+				<a href="{{ url_for('auth.register_vendor') }}"class="active">Register</a>
+			</div>
+			<form action="{{ url_for('auth.register_vendor') }}" method="post">
+                 <label for="firstname">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="firstname" placeholder="First name" id="firstname" required>
+
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+
+                <label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password1" placeholder="Password" id="password1" required>
+                <input type="password" name="password2" placeholder="Type password again" id="password2" required>
+
+                <label for="email">
+                    <i class="fas fa-regular fa-envelope"></i>
+				</label>
+				<input type="email" name="email" placeholder="E-mail" id="email" required>
+
+                <label for="phone">
+                    <i class="fas fa-solid fa-phone"></i>
+				</label>
+				<input type="text" name="tel" placeholder="000-000-0000" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <input type="submit" value="Register">
+			</form>
+		</div>
+{% endblock %}

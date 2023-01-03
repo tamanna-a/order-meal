@@ -1,5 +1,5 @@
 from item import Item
-
+from vendor import Vendor
 
 class Menu:
     """
@@ -7,13 +7,13 @@ class Menu:
     adding item and deleting item from menu.
     You can also change price of item
     """
-    def __init__(self, vendor_id):
-        self.vendor_id = vendor_id
+    def __init__(self, vendor):
+        self.Vendor = vendor
         self.items = []
 
     def add_new_item(self, name, price):
         item_id = len(self.items)
-        item = Item(self.vendor_id, item_id, name, price)
+        item = Item(self.Vendor, item_id, name, price)
         self.items.append(item)
         return item
 
@@ -52,7 +52,8 @@ class Menu:
 
 
 if __name__ == '__main__':
-    m = Menu(1)
+    vend = Vendor('indian')
+    m = Menu(vend)
     r= m.add_new_item('rice', 5)
     b= m.add_new_item('beans', 6)
     print(m)

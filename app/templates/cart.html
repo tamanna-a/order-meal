@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}Cart{% endblock %}
+{% block content %}
+
+    <h1> Cart </h1>
+    <div class = "cart" id = "cart">
+        {% for product in currentCart %}
+            <div class = "productInCart">
+                 <span> {{ product.name }} </span>
+                <span> {{ product.price }} </span>
+                <span>  {{ product.qty }}</span>
+            </div>
+            {% endfor %}
+    </div>
+
+    <div class = "col-6 mx-auto mt-5 text-center">
+     <button class='btn btn-success'> Place Order </button>
+    </div>
+
+    <div class = "col-6 mx-auto mt-5 text-center">
+    <form action="{{ url_for('cart.display_cart') }}" method="post">
+        <input type="submit" value="Place Order">
+    </form>
+    </div>
+
+{% endblock %}

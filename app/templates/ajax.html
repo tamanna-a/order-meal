@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block title %}Menu{% endblock %}
+{% block content %}
+    <script src = "increment.js"></script>
+    <p> hello</p>
+
+<div class='container'>
+    <div class = "row">
+        <h1 id = "incrementText">0</h1>
+        <button class='button' onclick="incrementButton()">
+            increase</button>
+        <div class = "col-6 mx-auto mt-5 text-center">
+               <button class='btn btn-success'>Go!</button>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

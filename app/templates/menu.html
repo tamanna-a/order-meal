@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block title %}Menu{% endblock %}
+{% block content %}
+
+    <div class="container">
+        <div class="row g-1">
+             {%  for item in menus %}
+            <div class="col-md-3">
+                <div class="card p-3">
+                    <div class="text-center">
+                        <img src="https://www.acouplecooks.com/wp-content/uploads/2022/02/How-to-Cook-Rice-002.jpg" width="200">
+                    </div>
+                    <div class="product-details">
+                         <span class="font-weight-bold d-block">$ {{ item.price }}</span>
+                         <span>{{ item.name}}</span>
+                         <div class="buttons d-flex flex-row">
+                            <div class="cart"><i class="fa fa-shopping-cart"></i></div>
+                             <button onclick = "" class="btn btn-success cart-button btn-block">
+                             <span class="dot">1</span>Add to cart </button>
+                        </div>
+
+                        <script>
+
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+{% endblock %}

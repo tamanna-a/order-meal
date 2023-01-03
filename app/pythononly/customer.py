@@ -1,4 +1,4 @@
-from user import User
+from app.pythononly.user import User
 
 class Customer(User):
     def __init__(self, name,email = None, phone = None,
