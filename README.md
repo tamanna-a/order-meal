@@ -1,10 +1,16 @@
 
+# Web app service to order home cooked food 
 
-User handling
 
-- uses sessions to handle login and logout
-- sets up permanent sessions for a certain time period
+## Stack at a glance
+1. Python
+2. Flask 
+   1. Blueprint for modularized API routing
+   2. session for browser caching
+   3. Login manager for user authentication
+3. SQL and SQLAlchemy
+4. HTML & CSS
+5. Javascript
 
-Cart CSS:
-- https://bbbootstrap.com/snippets/bootstrap-ecommerce-product-list-animation-add-cart-button-22938728
-- 
+## Quickstart
+`$ python run.py`
